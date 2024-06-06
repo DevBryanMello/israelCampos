@@ -1,0 +1,83 @@
+#contato {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contato {
+    margin-bottom: 30px;
+    width: 35%;
+    height: 130px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+.contato svg {
+    fill: #fff;
+    height: 80px;
+}
+.youtubeContato {
+    background-color: red;
+}
+.youtubeContato img {
+    width: 130px;
+    margin-bottom: 33px;
+}
+.instagramContato {
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.instagramContato img {
+    width: 110px;
+    margin-bottom: 35px;
+}
+.facebookContato {
+    background-color: #3b5998;
+}
+.facebookContato img {
+    width: 130px;
+    margin-bottom: 56px;
+}
+.whatsappContato {
+    background-color: #25D366;
+}
+.whatsappContato img {
+    width: 220px;
+    margin-bottom: 17px;
+}
+.contato:hover {
+    transform: scale(1.1);
+}
+@media screen and (max-width:1024px){
+    .contato svg {
+        height: 80px;
+    }
+    .contato {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .contato {
+        width: 70%;
+    }
+    .contato svg {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .contato {
+        width: 90%;
+    }
+    .contato svg {
+        height: 50px;
+    }
+    .whatsappContato img {
+        width: 180px;
+        margin-bottom: -12px;
+    }
+}

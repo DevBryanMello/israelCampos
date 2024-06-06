@@ -1,0 +1,30 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+tr:nth-child(even) {
+    background-color: #eee;
+}
+table {
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+}
+td {
+    padding: 10px;
+}
+th {
+    text-align: start;
+    padding-left: 10px;
+    padding: 10px;
+    background-color: #aaa;
+}

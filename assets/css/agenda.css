@@ -1,0 +1,59 @@
+#agenda {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.evento {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.data {
+    font-size: 13px;
+    font-weight: 600;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nome {
+    font-size: 25px;
+    font-weight: 800;
+}
+.endereco {
+    font-weight: 600;
+}
+@media screen and (max-width:800px){
+    .nome {
+        font-size: 20px;
+    }
+    .data {
+        text-align: center;
+        width: 100px;
+        margin-right: 5px;
+    }
+    .endereco {
+        font-size: 15px;
+    }
+    .evento {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:425px){
+    .data {
+        font-size: 10px;
+    }
+    .nome {
+        font-size: 15px;
+    }
+    .endereco {
+        font-size: 13px;
+    }
+}

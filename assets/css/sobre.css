@@ -1,0 +1,72 @@
+#geral {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    background-image: linear-gradient(to right, #212121 35%, #00000000 50%), url(/assets/images/imgSobre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -2;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.texto-lateral {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    color: #ffff;
+}
+.titulo {
+    width: 100%;
+    text-align: start;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: "Lora", serif;
+    font-weight: 600;
+}
+.titulo::after {
+    display: block;
+    content: '';
+    width: 8%;
+    height: 1px;
+    background-color: #dedede;
+    margin-top: 10px;
+}
+.desc {
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.desc p {
+    font-size: 18px;
+    font-family: 'Roboto Condensed', serif;
+}
+@media screen and (max-width:760px){
+    .banner {
+        display: none;
+    }
+    .texto-lateral {
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .desc {
+        width: 80%;
+    }
+    .titulo {
+        text-align: center;
+    }
+    .titulo::after {
+        display: none;
+    }
+}

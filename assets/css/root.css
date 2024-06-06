@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    background-color: #212121;
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cabecalho {
+    z-index: 5;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho img {
+    width: 250px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 20px;
+}
+li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 100px;
+}
+li::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: #fff;
+    transition: all linear 0.3s;
+    margin-top: 10px;
+}
+li:hover::after {
+    width: 100px;
+}
+.mobile-menu-icon {
+    display: none;
+}
+.mobile-menu-icon i {
+    margin-top: 12px;    
+    font-size: 30px;
+    color: #fff;
+}
+.menu-mobile {
+    display: none;
+}
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(0,0,0,0.45);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 37px;
+}
+.submenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #ededed;
+    margin: 15px 15px;
+}
+.redesSociais {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo-redes {    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+}
+.logo-redes img {
+    width: 16px;
+    height: 16px;
+}
+.logo-redes a {
+    display: flex;
+    justify-content: center;
+    padding: 3px 4px;
+    border-radius: 5px;
+}
+.logo-redes .instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.logo-redes .youtube:hover {
+    background: #ff0000;
+}
+.logo-redes .facebook:hover {
+    background: #3b5998;
+}
+@media screen and (max-width:1024px) {
+    li a {
+        margin-right: 60px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:850px) {
+    li a{
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width:768px) {
+    .menu {
+        display: none;
+    }
+    nav {
+        width: 0;
+    }
+    .menu-mobile {
+        display: none;
+        padding-top: 1.2rem;
+    }
+    .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .nav-item a {
+        font-size: 24px;
+    }
+    .mobile-menu-icon {
+        display: block;
+        margin-right: 50px;
+    }
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .textoFooter {
+        display: none;
+    }
+    .submenu {
+        justify-content: center;
+    }
+}
+@media screen and (max-width:475px){
+    .cabecalho img {
+        width: 200px;
+        margin-top: 20px;
+    }
+}

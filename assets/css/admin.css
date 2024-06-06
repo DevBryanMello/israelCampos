@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: #f1f1f1;
+}
+.area-site {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -6;
+}
+.menu-left {
+    min-width: 230px;
+    height: 100vh;
+    background-color: #212121;
+    position: fixed;
+    overflow: auto;
+}
+.logo img {
+    width: 200px;
+    margin: 10px;
+}
+.site-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.site-area h1 {
+    margin-top: 20px;
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+tr:nth-child(even) {
+    background-color: #eee;
+}
+table {
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+}
+td {
+    padding: 10px;
+}
+th {
+    text-align: start;
+    padding-left: 10px;
+    padding: 10px;
+    background-color: #aaa;
+}
+.editBtn,.deleteBtn {
+    text-decoration: none;
+    color: #000;
+}
+.editBtn:hover {
+    color: rgb(33, 214, 33);
+    transition: all linear 0.3s;
+}
+.deleteBtn:hover {
+    transition: all linear 0.3s;
+    color: red;
+}
+.btnAdd {
+    text-decoration:none;
+    color : #000;
+    font-size: 20px;
+    font-weight:600; 
+    cursor:pointer;
+    margin: 20px;
+}
+.eventos-proximos {
+    width: 100%;
+}
+.eventos-proximos table {
+    width: 80%;
+}
+.adicionar {
+    width: 80%;
+    margin-right: 30px;
+}
+@media screen and (max-width:768px){
+  .site-area h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .site-area {
+    text-align: center;
+  }
+  .eventos-proximos table{
+    width: 95%;
+  }
+  table {
+    font-size: 15px;
+  }
+  .adicionar {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .adicionar a{
+    font-size: 18px;
+  }
+}
+.data-passada{
+    margin-top: 20px;
+    width: 80%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;   
+}
+.data-cabecalho {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search {
+    width: 200px;
+    height: 30px;
+    padding-left: 5px;
+    outline: none;
+}
+.body-datasPassadas {
+    width: 100%;
+}
+.eventosAnteriores {
+    width: 100%;
+}
+.eventosAnteriores tr:nth-child(even) {
+    background-color: rgb(255, 41, 41); ;
+}
+.eventosAnteriores tr:nth-child(odd) {
+    background-color: rgb(255, 81, 81); ;
+}
+@media screen and (max-width:425px){
+    .eventos-proximos table {
+        width: 90%;
+    }
+    table {
+        font-size: 13px;
+        text-align: start;
+    }
+    .data-cabecalho {
+        flex-direction: column;
+    }
+    .data-cabecalho h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .data-cabecalho input{
+        margin-bottom: 10px;
+    }
+    .datas {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:350px){
+    .eventos-proximos table {
+        width: 100%;
+    }
+    table {
+        font-size: 13px;
+        text-align: start;
+    }
+}

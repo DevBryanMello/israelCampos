@@ -1,0 +1,46 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/paisagem2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form {
+    width: 30%;
+    padding: 40px 15px;
+    border-radius: 20px;
+    background-color: #20202081;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+input {
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 5px;
+}
+.btnEntrar {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #0065eb;
+    color: #fff;
+}
+@media screen and (max-width:425px) {
+    form {
+       width: 80%;
+    }
+}
