@@ -49,11 +49,13 @@ require('agendaConfig.php');
             echo "<h1/ style='color:#fff;margin-top:50px;'>Sem eventos próximos</h1>";
         }else {
             foreach($dado as $d){
-                $date = date('d/m/Y H:i', strtotime($d['horario']));
-                if($d['horario'] > $date){   
+                $hoje = date('d/m/Y H:i');
+                $horarioDado = date('d/m/Y'.' - '.'H:i', strtotime($d['horario']));
+                if($horarioDado > $hoje){   
+                    $newHour = $horarioDado;
     ?>
         <div class="evento">
-            <div class="data"><?=$date;?></div>
+            <div class="data"><?=$newHour;?></div>
             <div class="info">
                 <div class="nome"><?php echo $d['nome_local']; ?></div>
                 <div class="endereco"><?=$d['endereco'];?></div>

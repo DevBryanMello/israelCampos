@@ -1,6 +1,5 @@
 <?php
 require_once('../agendaConfig.php');
-
 try {
     $sql = "SELECT * FROM agenda";
     $sql = $pdo->query($sql);
