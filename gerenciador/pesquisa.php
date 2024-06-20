@@ -7,6 +7,13 @@
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     <title>Pesquisa | Israel Campos</title>
 </head>  
+<body>
+    <table>
+        
+    </table>
+
+</body>
+
 <?php
 require_once('../agendaConfig.php');
 
@@ -33,7 +40,8 @@ require_once('../agendaConfig.php');
     echo "<h1>Data pesquisada é: ".date('d/m/Y',strtotime($inputDate))."</h1>";
    // print_r($eventoFiltrado);
      foreach($eventoFiltrado as $ev){
-      echo $ev['nome_local'];
+        echo "<pre>"; 
+        echo $ev['nome_local'];
 }
 }
 ?>
