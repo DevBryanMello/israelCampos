@@ -87,6 +87,21 @@ th {
     width: 80%;
     margin-right: 30px;
 }
+form {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+.btnPesquisa {
+    outline: none;
+    border: none;
+    background-color: #0065eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+}
 @media screen and (max-width:768px){
   .site-area h1 {
     font-size: 22px;

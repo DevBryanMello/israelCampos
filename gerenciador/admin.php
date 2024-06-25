@@ -27,7 +27,6 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
                 
                 require_once('../agendaConfig.php');
                 require_once('./configDatas.php');
-                require_once('./pesquisa.php');
                 $sql = "SELECT * FROM agenda ORDER BY horario ASC";
                 $sql = $pdo->query($sql);
 
@@ -55,10 +54,10 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
             <div class="data-passada">
                 <div class="data-cabecalho">
                     <h1>Shows anteriores:</h1>
-                    
+                
                     <form method="GET" action="pesquisa.php" >
                         <input type="date" id="date" name="date" class="search" >
-                        <input type="submit" value="Enviar">
+                        <input type="submit" class="btnPesquisa" value="Enviar">
                     </form>
 
                 </div>
@@ -68,15 +67,17 @@ if(isset($_SESSION['id']) && !empty($_SESSION['id'])){
                         <th>Nome do Local</th>
                         <th>Endereço</th>
                         <th>Horario</th>
+                        <th>Ações</th>
                     </tr>
                     <?php 
                     foreach($dadosAgenda as $datasPassadas) {
                         if($datasPassadas['horario'] < $hoje){
-                            $horarioPassado = date('d-m-Y H:i', strtotime($datasPassadas['horario']));
+                            $horarioPassado = date('d/m/Y H:i', strtotime($datasPassadas['horario']));
                             echo '<tr>';
                             echo '<td>'.$datasPassadas['nome_local'].'</td>';
                             echo '<td>'.$datasPassadas['endereco'].'</td>';
                             echo '<td>'.$horarioPassado.'</td>';
+                            echo '<td><a class="editBtn" style="color:#000" href="editar.php?id='.$datasPassadas['id'].'">Editar</a> - <a class="deleteBtn" style="color:#000" href="deletar.php?id='.$datasPassadas['id'].'">Exluir</a></td>';
                         }
                     }
                     ?>

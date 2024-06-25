@@ -8,11 +8,14 @@
     <title>Pesquisa | Israel Campos</title>
 </head>  
 <body>
+<a class="btnVoltar" href="admin.php">Voltar</a>
+    <div class="eventosPassados">
     <table>
-        
-    </table>
-
-</body>
+        <tr>
+            <th>Nome do Local</th>
+            <th>Endereço</th>
+            <th>Horario</th>
+        </tr>
 
 <?php
 require_once('../agendaConfig.php');
@@ -38,12 +41,17 @@ require_once('../agendaConfig.php');
         }
     }
     echo "<h1>Data pesquisada é: ".date('d/m/Y',strtotime($inputDate))."</h1>";
-   // print_r($eventoFiltrado);
      foreach($eventoFiltrado as $ev){
-        echo "<pre>"; 
-        echo $ev['nome_local'];
+        $oldTime = date('d/m/Y H:i', strtotime($ev['horario']));
+        echo '<tr>';
+        echo '<td>'.$ev['nome_local'].'</td>';
+        echo '<td>'.$ev['endereco'].'</td>';
+        echo '<td>'.$oldTime.'</td>';
+        echo '</tr>';
+
 }
 }
 ?>
-
-    
+ </table>
+</div>
+</body>
